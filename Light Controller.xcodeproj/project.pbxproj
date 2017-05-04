@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		0A628E2A1EB8D6F8008515CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A628E291EB8D6F8008515CD /* AppDelegate.swift */; };
-		0A628E2C1EB8D6F9008515CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A628E2B1EB8D6F9008515CD /* ViewController.swift */; };
 		0A628E2F1EB8D6F9008515CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A628E2D1EB8D6F9008515CD /* Main.storyboard */; };
 		0A628E311EB8D6F9008515CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A628E301EB8D6F9008515CD /* Assets.xcassets */; };
 		0A628E341EB8D6F9008515CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A628E321EB8D6F9008515CD /* LaunchScreen.storyboard */; };
+		0A9897991EBA6C0A00077CBA /* OutletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9897981EBA6C0A00077CBA /* OutletsViewController.swift */; };
+		0AA35CE51EBB5B88003E2CAF /* OutletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA35CE41EBB5B88003E2CAF /* OutletTableViewCell.swift */; };
+		0AA35CE71EBB733E003E2CAF /* OutletButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA35CE61EBB733E003E2CAF /* OutletButton.swift */; };
+		0AA35CEA1EBB796A003E2CAF /* OutletSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA35CE91EBB796A003E2CAF /* OutletSettings.swift */; };
+		0AA35CEC1EBB7AE8003E2CAF /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA35CEB1EBB7AE8003E2CAF /* ActionType.swift */; };
+		0AA35CEE1EBB815C003E2CAF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA35CED1EBB815C003E2CAF /* SettingsViewController.swift */; };
+		0AA35CF21EBBA90F003E2CAF /* OutletCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA35CF11EBBA90F003E2CAF /* OutletCommunicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A628E261EB8D6F8008515CD /* Light Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A628E291EB8D6F8008515CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A628E2B1EB8D6F9008515CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A628E2E1EB8D6F9008515CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A628E301EB8D6F9008515CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A628E331EB8D6F9008515CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A628E351EB8D6F9008515CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A9897981EBA6C0A00077CBA /* OutletsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutletsViewController.swift; sourceTree = "<group>"; };
+		0AA35CE41EBB5B88003E2CAF /* OutletTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutletTableViewCell.swift; sourceTree = "<group>"; };
+		0AA35CE61EBB733E003E2CAF /* OutletButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutletButton.swift; sourceTree = "<group>"; };
+		0AA35CE91EBB796A003E2CAF /* OutletSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutletSettings.swift; sourceTree = "<group>"; };
+		0AA35CEB1EBB7AE8003E2CAF /* ActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		0AA35CED1EBB815C003E2CAF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0AA35CF11EBBA90F003E2CAF /* OutletCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutletCommunicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,27 @@
 			isa = PBXGroup;
 			children = (
 				0A628E291EB8D6F8008515CD /* AppDelegate.swift */,
-				0A628E2B1EB8D6F9008515CD /* ViewController.swift */,
-				0A628E2D1EB8D6F9008515CD /* Main.storyboard */,
+				0A9897981EBA6C0A00077CBA /* OutletsViewController.swift */,
+				0AA35CE91EBB796A003E2CAF /* OutletSettings.swift */,
+				0AA35CED1EBB815C003E2CAF /* SettingsViewController.swift */,
+				0AA35CF11EBBA90F003E2CAF /* OutletCommunicator.swift */,
+				0AA35CE81EBB791E003E2CAF /* Views */,
 				0A628E301EB8D6F9008515CD /* Assets.xcassets */,
 				0A628E321EB8D6F9008515CD /* LaunchScreen.storyboard */,
 				0A628E351EB8D6F9008515CD /* Info.plist */,
 			);
 			path = "Light Controller";
+			sourceTree = "<group>";
+		};
+		0AA35CE81EBB791E003E2CAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AA35CE41EBB5B88003E2CAF /* OutletTableViewCell.swift */,
+				0A628E2D1EB8D6F9008515CD /* Main.storyboard */,
+				0AA35CE61EBB733E003E2CAF /* OutletButton.swift */,
+				0AA35CEB1EBB7AE8003E2CAF /* ActionType.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +117,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Kevin Brink";
 				TargetAttributes = {
 					0A628E251EB8D6F8008515CD = {
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A628E2C1EB8D6F9008515CD /* ViewController.swift in Sources */,
+				0AA35CE71EBB733E003E2CAF /* OutletButton.swift in Sources */,
+				0AA35CE51EBB5B88003E2CAF /* OutletTableViewCell.swift in Sources */,
+				0A9897991EBA6C0A00077CBA /* OutletsViewController.swift in Sources */,
+				0AA35CF21EBBA90F003E2CAF /* OutletCommunicator.swift in Sources */,
+				0AA35CEA1EBB796A003E2CAF /* OutletSettings.swift in Sources */,
 				0A628E2A1EB8D6F8008515CD /* AppDelegate.swift in Sources */,
+				0AA35CEC1EBB7AE8003E2CAF /* ActionType.swift in Sources */,
+				0AA35CEE1EBB815C003E2CAF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +214,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -232,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -263,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D7J56W86RV;
 				INFOPLIST_FILE = "Light Controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kbrink.Light-Controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D7J56W86RV;
 				INFOPLIST_FILE = "Light Controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kbrink.Light-Controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +338,7 @@
 				0A628E3A1EB8D6F9008515CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
