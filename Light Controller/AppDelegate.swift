@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // This is a little gnarly, but our "root" view controller is a
+        // navigation controller that should contain the outlets view controller
+        // as it's first child
+        if let outletsViewController = window?.rootViewController?.childViewControllers[0] as? OutletsViewController {
+            // Once we get that, we can set the settings property
+            outletsViewController.settings = OutletSettings()
+        }
         return true
     }
 
