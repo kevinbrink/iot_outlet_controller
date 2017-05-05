@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os
 
 class SettingsViewController: UIViewController, UITextFieldDelegate {
     var settings: OutletSettings!
@@ -36,6 +37,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func done(_ sender: UIBarButtonItem) {
         settings.serverUrl = serverUrl.text!
+        settings.save()
         dismiss(animated: true, completion: nil)
     }
 
@@ -43,25 +45,26 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         let newValue = Int(sender.value)
 
         // Update model
-        settings.numOutlets = newValue
+        while (newValue > settings.outletNames.count) {
+            settings.outletNames.append("\(settings.outletNames.count+1)")
+        }
+        while (newValue < settings.outletNames.count) {
+            // For now, we just naively, brutally, remove the last one
+            settings.outletNames.removeLast()
+        }
 
         // Update display
-        numOutletsDisplay.text = "\(settings.numOutlets)"
+        numOutletsDisplay.text = "\(settings.outletNames.count)"
     }
 
     //MARK: Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Here, if we wanted to, we could pass on all of the data from this viewController in some way to the next one
-        super.prepare(for: segue, sender: sender)
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         // Update display
-        numOutletsDisplay.text = "\(settings.numOutlets)"
-        numOutletsStepper.value = Double(settings.numOutlets)
+        numOutletsDisplay.text = "\(settings.outletNames.count)"
+        numOutletsStepper.value = Double(settings.outletNames.count)
         serverUrl.text = settings.serverUrl
     }
 }
