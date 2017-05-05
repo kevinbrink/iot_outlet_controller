@@ -19,8 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // navigation controller that should contain the outlets view controller
         // as it's first child
         if let outletsViewController = window?.rootViewController?.childViewControllers[0] as? OutletsViewController {
-            // Once we get that, we can set the settings property
-            outletsViewController.settings = OutletSettings()
+            // Try to get the existing settings
+            if let settings = NSKeyedUnarchiver.unarchiveObject(withFile: OutletSettings.ArchiveURL.path) as? OutletSettings {
+                outletsViewController.settings = settings
+            } else {
+                outletsViewController.settings = OutletSettings()
+            }
         }
         return true
     }

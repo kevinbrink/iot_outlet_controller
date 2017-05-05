@@ -3,15 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "OutletsViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():OutletsViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "SettingsViewController.numOutletsChanged(UIStepper) -&gt; ():SettingsViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.settings">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "OutletsViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():OutletsViewController.swift">
       </ContextState>
       <ContextState
          contextName = "OutletsViewController.viewWillAppear(Bool) -&gt; ():OutletsViewController.swift">
@@ -25,7 +25,18 @@
          contextName = "SettingsViewController.done(UIBarButtonItem) -&gt; ():SettingsViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "NSKeyedUnarchiver.unarchiveObject(withFile: OutletSettings.ArchiveURL.path) as? OutletSettings">
+            </PersistentString>
+            <PersistentString
                value = "settings">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OutletSettings.encode(with : NSCoder) -&gt; ():OutletSettings.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "aCoder.encode(numOutlets, forKey: PropertyKeys.numOutlets)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -42,6 +53,20 @@
          <PersistentStrings>
             <PersistentString
                value = "window?.rootViewController.childViewControllers[0] as? OutletsViewController">
+            </PersistentString>
+            <PersistentString
+               value = "NSKeyedUnarchiver.unarchiveObject(withFile: &#x1f50c;.ArchiveURL.path)">
+            </PersistentString>
+            <PersistentString
+               value = "&#x1f50c;.ArchiveUrl.path">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OutletsViewController.doneButtonPushed(Any?) -&gt; ():OutletsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "settings.outletNames">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
