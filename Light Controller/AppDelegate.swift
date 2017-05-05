@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let outletsViewController = window?.rootViewController?.childViewControllers[0] as? OutletsViewController {
             // Try to get the existing settings
             if let settings = NSKeyedUnarchiver.unarchiveObject(withFile: OutletSettings.ArchiveURL.path) as? OutletSettings {
-                outletsViewController.settings = settings
+                outletsViewController.🔌 = settings
             } else {
-                outletsViewController.settings = OutletSettings()
+                outletsViewController.🔌 = OutletSettings()
             }
         }
         return true

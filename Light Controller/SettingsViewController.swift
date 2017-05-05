@@ -10,7 +10,7 @@ import UIKit
 import os
 
 class SettingsViewController: UIViewController, UITextFieldDelegate {
-    var settings: OutletSettings!
+    var 🔌: OutletSettings!
 
     @IBOutlet weak var numOutletsDisplay: UITextField!
     @IBOutlet weak var numOutletsStepper: UIStepper!
@@ -36,8 +36,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     //MARK: Actions; responding to buttons or other UI interactions
 
     @IBAction func done(_ sender: UIBarButtonItem) {
-        settings.serverUrl = serverUrl.text!
-        settings.save()
+        🔌.serverUrl = serverUrl.text!
+        🔌.save()
         dismiss(animated: true, completion: nil)
     }
 
@@ -45,16 +45,16 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         let newValue = Int(sender.value)
 
         // Update model
-        while (newValue > settings.outletNames.count) {
-            settings.outletNames.append("\(settings.outletNames.count+1)")
+        while (newValue > 🔌.outletNames.count) {
+            🔌.outletNames.append("\(🔌.outletNames.count+1)")
         }
-        while (newValue < settings.outletNames.count) {
+        while (newValue < 🔌.outletNames.count) {
             // For now, we just naively, brutally, remove the last one
-            settings.outletNames.removeLast()
+            🔌.outletNames.removeLast()
         }
 
         // Update display
-        numOutletsDisplay.text = "\(settings.outletNames.count)"
+        numOutletsDisplay.text = "\(🔌.outletNames.count)"
     }
 
     //MARK: Navigation
@@ -63,8 +63,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
 
         // Update display
-        numOutletsDisplay.text = "\(settings.outletNames.count)"
-        numOutletsStepper.value = Double(settings.outletNames.count)
-        serverUrl.text = settings.serverUrl
+        numOutletsDisplay.text = "\(🔌.outletNames.count)"
+        numOutletsStepper.value = Double(🔌.outletNames.count)
+        serverUrl.text = 🔌.serverUrl
     }
 }

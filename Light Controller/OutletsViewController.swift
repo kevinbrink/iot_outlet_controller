@@ -17,7 +17,7 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
     var doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPushed(_:)))
 
     // This settings instance gets instantiated by the AppDelegate
-    var settings: OutletSettings!
+    var 🔌: OutletSettings!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0) {
-            return settings.outletNames.count
+            return 🔌.outletNames.count
         }
         return 0
     }
@@ -47,7 +47,7 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         let outletId = indexPath.row + 1
         // Set the label
-        cell.outletName.text = "\(settings.outletNames[indexPath.row])"
+        cell.outletName.text = "\(🔌.outletNames[indexPath.row])"
 
         // Set the on button
         cell.onButton.action = .on // Not sure if this is really necessary :P
@@ -73,7 +73,7 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
     //MARK: Actions
 
     @IBAction func buttonPushed(_ sender: OutletButton) {
-        OutletCommunicator.sendSignal(settings.serverUrl, sender.outletId!, sender.action)
+        OutletCommunicator.sendSignal(🔌.serverUrl, sender.outletId!, sender.action)
     }
 
     @IBAction func cellEditBegan(_ sender: UITextField) {
@@ -83,8 +83,8 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
     func doneButtonPushed(_ sender: Any?) {
         navigationItems.leftBarButtonItems?.removeAll()
         if let cells = self.tableView.visibleCells as? [OutletTableViewCell] {
-            settings.outletNames = cells.map({ $0.outletName.text! })
-            settings.save()
+            🔌.outletNames = cells.map({ $0.outletName.text! })
+            🔌.save()
         }
         self.view.endEditing(true)
     }
@@ -96,7 +96,7 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
             // It seems that this view controller gets completely destroyed and 
             // re-created with navigation, so we have to always re-set the
             // settings property
-            destinationViewController.settings = self.settings
+            destinationViewController.🔌 = self.🔌
         }
     }
 
