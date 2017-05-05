@@ -70,5 +70,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "static OutletCommunicator.(sendSignal(String, Int, ActionType) -&gt; ()).(closure #1):OutletCommunicator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error! as! URLError">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -73,7 +73,7 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
     //MARK: Actions
 
     @IBAction func buttonPushed(_ sender: OutletButton) {
-        OutletCommunicator.sendSignal(🔌.serverUrl, sender.outletId!, sender.action)
+        OutletCommunicator.sendSignal(🔌.serverUrl, sender.outletId!, sender.action, success, error)
     }
 
     @IBAction func cellEditBegan(_ sender: UITextField) {
@@ -102,5 +102,15 @@ class OutletsViewController: UIViewController, UITableViewDataSource, UITableVie
 
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+    }
+
+    //MARK: RF Signal callbacks
+    func success(action: String, outletNumber: String) {
+        // Some UI to let the user know that it worked
+
+    }
+
+    func error(action: String, outletNumber: String) {
+        // Some UI to let the user know that it failed
     }
 }
